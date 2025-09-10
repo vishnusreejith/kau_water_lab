@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Analysis Lab | CCCES, Kerala Agricultural University</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1558253130-d8705c3a19b8?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .tab-button.active {
+            border-color: #3b82f6;
+            background-color: #3b82f6;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #printable-form, #printable-form * {
+                visibility: visible;
+            }
+            #printable-form {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                 <img src="https://placehold.co/50x50/22c55e/ffffff?text=KAU" alt="KAU Logo" class="h-10 w-10 mr-3 rounded-full">
+                <div>
+                    <h1 class="text-sm font-bold text-green-700">KERALA AGRICULTURAL UNIVERSITY</h1>
+                    <p class="text-xs text-gray-600">College of Climate Change & Environmental Science</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-blue-600">Home</a>
+                <a href="#services" class="text-gray-600 hover:text-blue-600">Our Services</a>
+                <a href="#guide" class="text-gray-600 hover:text-blue-600">How to Submit</a>
+                <a href="#form" class="text-gray-600 hover:text-blue-600">Request Form</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact Us</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#home" class="block py-2 px-6 text-sm text-gray-700 hover:bg-gray-200">Home</a>
+            <a href="#services" class="block py-2 px-6 text-sm text-gray-700 hover:bg-gray-200">Our Services</a>
+            <a href="#guide" class="block py-2 px-6 text-sm text-gray-700 hover:bg-gray-200">How to Submit</a>
+            <a href="#form" class="block py-2 px-6 text-sm text-gray-700 hover:bg-gray-200">Request Form</a>
+            <a href="#contact" class="block py-2 px-6 text-sm text-gray-700 hover:bg-gray-200">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg text-white h-[60vh] flex flex-col justify-center items-center text-center">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">Water Quality Analysis Laboratory</h2>
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Ensuring the safety and purity of your water source. Accurate testing for households, industries, and researchers.</p>
+                <a href="#guide" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">Get Started</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-3xl font-bold mb-3">What We Test</h3>
+                <p class="text-gray-600 mb-12">We offer a range of tests to assess the quality of your water. Our key parameters include:</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 max-w-6xl mx-auto">
+                    <!-- Service Items -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <svg class="w-12 h-12 mx-auto text-blue-500 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 18.734V6a2 2 0 012-2h4a2 2 0 012 2v4z"></path></svg>
+                        <h4 class="font-semibold text-lg">pH</h4>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <svg class="w-12 h-12 mx-auto text-blue-500 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4H7zM10 21a4 4 0 00-4-4V5a2 2 0 00-2-2h4a2 2 0 002 2v12a4 4 0 00-4 4h-4z"></path></svg>
+                        <h4 class="font-semibold text-lg">TDS</h4>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                         <svg class="w-12 h-12 mx-auto text-blue-500 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        <h4 class="font-semibold text-lg">Hardness</h4>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <svg class="w-12 h-12 mx-auto text-blue-500 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-12v4m-2-2h4m5 4v4m-2-2h4M17 3h4M19 5v4"></path></svg>
+                        <h4 class="font-semibold text-lg">Chloride</h4>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <svg class="w-12 h-12 mx-auto text-blue-500 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01"></path></svg>
+                        <h4 class="font-semibold text-lg">Salinity</h4>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                         <svg class="w-12 h-12 mx-auto text-red-500 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V5m0 14v-1M9 12l-2-2-2 2m6-4l2-2 2 2m0 6l2 2-2 2m-6 4l-2 2-2-2"></path></svg>
+                        <h4 class="font-semibold text-lg">Total Coliform</h4>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                         <svg class="w-12 h-12 mx-auto text-red-500 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M15 21v-1a6 6 0 00-9-5.197m0 0A5.975 5.975 0 0012 15a5.975 5.975 0 00-3-5.197m0 0A7 7 0 0012 5.646a7 7 0 00-3 9.157z"></path></svg>
+                        <h4 class="font-semibold text-lg">E. Coli</h4>
+                    </div>
+                </div>
+                 <p class="text-gray-600 mt-12">If you require testing for other parameters, please specify them on the request form or contact us.</p>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center mb-3">How to Submit a Sample</h3>
+                <p class="text-gray-600 mb-12 text-center max-w-3xl mx-auto">Follow these simple steps to ensure your sample is collected correctly for accurate testing. Correct sample collection is crucial for reliable results.</p>
+
+                <div class="flex justify-center mb-8">
+                    <div class="border-2 border-blue-500 rounded-full overflow-hidden">
+                        <button id="tab-en" class="tab-button active py-2 px-6 transition-colors duration-300">English</button>
+                        <button id="tab-ml" class="tab-button py-2 px-6 transition-colors duration-300">മലയാളം</button>
+                    </div>
+                </div>
+
+                <!-- English Content -->
+                <div id="content-en" class="tab-content active">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-500">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 text-blue-600 rounded-full h-12 w-12 flex items-center justify-center font-bold text-2xl mr-4">1</div>
+                                <h4 class="text-xl font-semibold">Get the Right Bottles</h4>
+                            </div>
+                            <p class="text-gray-600">Use a clean, 1-litre plastic bottle for general tests. For bacteria testing (E. Coli), you **MUST** use a separate, **sterile** bottle available from our lab or a pharmacy.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-green-500">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-green-100 text-green-600 rounded-full h-12 w-12 flex items-center justify-center font-bold text-2xl mr-4">2</div>
+                                <h4 class="text-xl font-semibold">Collect the Sample</h4>
+                            </div>
+                            <p class="text-gray-600">From a tap, let water run for 2-3 mins first. From a well, submerge the bottle to collect. Leave a small air gap at the top and cap tightly.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-yellow-500">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-yellow-100 text-yellow-600 rounded-full h-12 w-12 flex items-center justify-center font-bold text-2xl mr-4">3</div>
+                                <h4 class="text-xl font-semibold">Label Your Sample</h4>
+                            </div>
+                            <p class="text-gray-600">Clearly write your Name, Sample Location, and the Date & Time of collection on each bottle with a waterproof marker.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-purple-500">
+                             <div class="flex items-center mb-4">
+                                <div class="bg-purple-100 text-purple-600 rounded-full h-12 w-12 flex items-center justify-center font-bold text-2xl mr-4">4</div>
+                                <h4 class="text-xl font-semibold">Deliver Promptly</h4>
+                            </div>
+                            <p class="text-gray-600">Bring the sample to our lab on the same day of collection. Keep it cool and out of direct sunlight during transport. Do not freeze.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Malayalam Content -->
+                <div id="content-ml" class="tab-content">
+                     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-500">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 text-blue-600 rounded-full h-12 w-12 flex items-center justify-center font-bold text-2xl mr-4">1</div>
+                                <h4 class="text-xl font-semibold">ശരിയായ കുപ്പികൾ</h4>
+                            </div>
+                            <p class="text-gray-600">പൊതുവായ പരിശോധനകൾക്ക് 1 ലിറ്ററിന്റെ വൃത്തിയുള്ള പ്ലാസ്റ്റിക് കുപ്പി ഉപയോഗിക്കുക. ബാക്ടീരിയ (E. Coli) പരിശോധനയ്ക്ക്, ലാബിൽ നിന്നോ ഫാർമസിയിൽ നിന്നോ ലഭിക്കുന്ന **അണുവിമുക്തമായ (sterile)** കുപ്പി **നിർബന്ധമായും** ഉപയോഗിക്കണം.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-green-500">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-green-100 text-green-600 rounded-full h-12 w-12 flex items-center justify-center font-bold text-2xl mr-4">2</div>
+                                <h4 class="text-xl font-semibold">സാമ്പിൾ ശേഖരണം</h4>
+                            </div>
+                            <p class="text-gray-600">ടാപ്പിൽ നിന്ന് ശേഖരിക്കുമ്പോൾ 2-3 മിനിറ്റ് വെള്ളം തുറന്നു വിടുക. കിണറ്റിൽ നിന്ന് കുപ്പി വെള്ളത്തിൽ മുക്കി ശേഖരിക്കുക. മുകളിൽ അല്പം വായുവിന് ഇടം നൽകി കുപ്പി നന്നായി അടയ്ക്കുക.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-yellow-500">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-yellow-100 text-yellow-600 rounded-full h-12 w-12 flex items-center justify-center font-bold text-2xl mr-4">3</div>
+                                <h4 class="text-xl font-semibold">ലേബൽ ചെയ്യുക</h4>
+                            </div>
+                            <p class="text-gray-600">ഓരോ കുപ്പിയിലും നിങ്ങളുടെ പേര്, സ്ഥലം, ശേഖരിച്ച തീയതി, സമയം എന്നിവ മായാത്ത മാർക്കർ ഉപയോഗിച്ച് വ്യക്തമായി എഴുതുക.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-purple-500">
+                             <div class="flex items-center mb-4">
+                                <div class="bg-purple-100 text-purple-600 rounded-full h-12 w-12 flex items-center justify-center font-bold text-2xl mr-4">4</div>
+                                <h4 class="text-xl font-semibold">വേഗത്തിൽ എത്തിക്കുക</h4>
+                            </div>
+                            <p class="text-gray-600">ശേഖരിച്ച അതേ ദിവസം തന്നെ സാമ്പിൾ ലാബിൽ എത്തിക്കുക. യാത്രയിൽ വെയിൽ കൊള്ളാതെ തണുപ്പുള്ള സ്ഥലത്ത് സൂക്ഷിക്കുക. ഫ്രീസ് ചെയ്യരുത്.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section id="form" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h3 class="text-3xl font-bold mb-3">Analysis Request Form</h3>
+                    <p class="text-gray-600 mb-8">Please print and fill out this form to submit along with your water sample.</p>
+                    <button onclick="printForm()" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 mb-12">
+                        Print Form
+                    </button>
+                </div>
+                
+                <div id="printable-form" class="max-w-4xl mx-auto bg-white p-8 border border-gray-200 rounded-lg shadow-lg">
+                    <div class="text-center mb-8">
+                        <h4 class="text-xl font-bold">COLLEGE OF CLIMATE CHANGE AND ENVIRONMENTAL SCIENCE</h4>
+                        <p class="font-semibold">KERALA AGRICULTURAL UNIVERSITY, VELLANIKARA, THRISSUR, 680656</p>
+                        <h5 class="text-lg font-bold mt-4 border-b-2 pb-2">WATER QUALITY ANALYSIS REQUEST FORM</h5>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div><label class="block text-sm font-medium">Name:</label><div class="h-8 border-b border-gray-300"></div></div>
+                            <div><label class="block text-sm font-medium">Mobile:</label><div class="h-8 border-b border-gray-300"></div></div>
+                        </div>
+                        <div><label class="block text-sm font-medium">Address:</label><div class="h-8 border-b border-gray-300"></div></div>
+                        <div><label class="block text-sm font-medium">Email ID:</label><div class="h-8 border-b border-gray-300"></div></div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+                            <div><label class="block text-sm font-medium">Sample details (Specify the source):</label><div class="h-8 border-b border-gray-300"></div></div>
+                            <div><label class="block text-sm font-medium">No. of samples:</label><div class="h-8 border-b border-gray-300"></div></div>
+                        </div>
+                        
+                        <div class="pt-4">
+                            <label class="block text-sm font-medium mb-2">Parameters required (Tick whichever is applicable):</label>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                                <div class="flex items-center"><input type="checkbox" class="h-4 w-4 mr-2"> pH</div>
+                                <div class="flex items-center"><input type="checkbox" class="h-4 w-4 mr-2"> TDS</div>
+                                <div class="flex items-center"><input type="checkbox" class="h-4 w-4 mr-2"> Hardness</div>
+                                <div class="flex items-center"><input type="checkbox" class="h-4 w-4 mr-2"> Chloride</div>
+                                <div class="flex items-center"><input type="checkbox" class="h-4 w-4 mr-2"> Salinity</div>
+                                <div class="flex items-center"><input type="checkbox" class="h-4 w-4 mr-2"> Total Coliform</div>
+                                <div class="flex items-center col-span-2"><input type="checkbox" class="h-4 w-4 mr-2"> E-Coli <span class="text-xs text-red-600 ml-1">(Requires sterile bottle)</span></div>
+                            </div>
+                             <div class="mt-4"><label class="block text-sm font-medium">If any other parameter please specify:</label><div class="h-8 border-b border-gray-300"></div></div>
+                        </div>
+
+                        <div><label class="block text-sm font-medium">Purpose for which measurement is requested (in brief):</label><div class="h-8 border-b border-gray-300"></div></div>
+
+                        <div class="pt-4">
+                            <label class="block text-sm font-medium mb-2">Category (Tick whichever is applicable):</label>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                                <div class="flex items-center"><input type="checkbox" class="h-4 w-4 mr-2"> Household</div>
+                                <div class="flex items-center"><input type="checkbox" class="h-4 w-4 mr-2"> Industries</div>
+                                <div class="flex items-center"><input type="checkbox" class="h-4 w-4 mr-2"> Research Institutions</div>
+                                <div class="flex items-center"><input type="checkbox" class="h-4 w-4 mr-2"> Educational Institutions</div>
+                                <div class="flex items-center col-span-2"><input type="checkbox" class="h-4 w-4 mr-2"> Other: ...........................</div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+                             <div><label class="block text-sm font-medium">Payment Method:</label><div class="h-8 border-b border-gray-300"></div></div>
+                            <div><label class="block text-sm font-medium">Payment Date:</label><div class="h-8 border-b border-gray-300"></div></div>
+                        </div>
+                        <div><label class="block text-sm font-medium">Payment proof (Transaction ID/Number):</label><div class="h-8 border-b border-gray-300"></div></div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12">
+                            <div><div class="h-8 border-b border-gray-300 mt-8"></div><label class="block text-sm font-medium text-center">Name and Signature of the Applicant</label></div>
+                            <div><div class="h-8 border-b border-gray-300 mt-8"></div><label class="block text-sm font-medium text-center">Name and signature and seal of (HOD/Principal etc.) - Only if applicable</label></div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h3 class="text-3xl font-bold mb-3">Visit or Contact Us</h3>
+                    <p class="text-gray-600 mb-12">We are here to help. Reach out to us for any queries.</p>
+                </div>
+                <div class="flex flex-wrap -mx-4">
+                    <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
+                        <div class="bg-white p-8 rounded-lg shadow-lg h-full">
+                            <h4 class="text-2xl font-bold mb-4">Our Location</h4>
+                            <p class="font-semibold">College of Climate Change and Environmental Science,</p>
+                            <p class="mb-4">Kerala Agricultural University, Vellanikkara, Thrissur, Kerala, 680656</p>
+                            
+                            <h4 class="text-xl font-bold mt-6 mb-2">Contact Details</h4>
+                            <p><span class="font-semibold">Phone:</span> +91-XXX-XXXXXXX (Placeholder)</p>
+                            <p><span class="font-semibold">Email:</span> ccces@kau.in (Placeholder)</p>
+                            
+                            <h4 class="text-xl font-bold mt-6 mb-2">Working Hours</h4>
+                            <p><span class="font-semibold">Monday - Friday:</span> 9:00 AM - 5:00 PM</p>
+                            <p><span class="font-semibold">Saturday - Sunday:</span> Closed</p>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 px-4">
+                         <div class="rounded-lg shadow-lg overflow-hidden h-full">
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.3792013898863!2d76.27376081479882!3d10.550186892475454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7e1451a5c689d%3A0x334a17382583842!2sKerala%20Agricultural%20University!5e0!3m2!1sen!2sin!4v1662793282431!5m2!1sen!2sin" 
+                           width="100%" 
+                           height="450" 
+                           style="border:0;" 
+                           allowfullscreen="" 
+                           loading="lazy" 
+                           referrerpolicy="no-referrer-when-downgrade"
+                           class="h-full w-full"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 College of Climate Change and Environmental Science, KAU. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Tab functionality for guidelines
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Deactivate all buttons and content
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Activate clicked button and corresponding content
+                button.classList.add('active');
+                const targetContentId = 'content-' + button.id.split('-')[1];
+                document.getElementById(targetContentId).classList.add('active');
+            });
+        });
+        
+        // Print form function
+        function printForm() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
