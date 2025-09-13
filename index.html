@@ -13,8 +13,8 @@
             font-family: 'Inter', sans-serif;
         }
         .hero-bg {
-            /* Using a placeholder for the background image */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://placehold.co/1200x800/166534/FFFFFF?text=Water+Lab');
+            /* This now points to your local image in the 'Images' folder */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Images/my-cover.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -62,10 +62,11 @@
     <header class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div class="flex items-center">
-                 <!-- Using a placeholder for the logo -->
-                <img src="Images/my-cover.jpg" 
-                     alt="KAU Logo" 
-                     class="h-12 w-12 mr-3">
+                 <!-- This now points to your local logo in the 'Images' folder -->
+                <img src="Images/my-logo.jpeg" 
+                     alt="KAU logo" 
+                     class="h-12 w-12 mr-3"
+                     onerror="this.onerror=null;this.src='https://placehold.co/50x50/22c55e/ffffff?text=KAU';">
                 <div>
                     <h1 class="text-sm font-bold text-green-700">KERALA AGRICULTURAL UNIVERSITY</h1>
                     <p class="text-xs text-gray-600">College of Climate Change & Environmental Science</p>
@@ -333,7 +334,7 @@
                         </div>
                         <div class="w-full lg:w-1/2 px-4">
                              <div class="rounded-lg shadow-lg overflow-hidden h-full">
-                               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.3792013898863!2d76.27376081479882!3d10.550186892475454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7e1451a5c689d%3A0x334a17382583842!2sKerala%20Agricultural%20University!5e0!3m2!1sen!2sin!4v1662793282431!5m2!1sen!2sin" 
+                               <iframe src="https://www.google.com/maps/embed?pb=!1m18!m12!1m3!1d3922.3792013898863!2d76.27376081479882!3d10.550186892475454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7e1451a5c689d%3A0x334a17382583842!2sKerala%20Agricultural%20University!5e0!3m2!1sen!2sin!4v1662793282431!5m2!1sen!2sin" 
                                width="100%" 
                                height="450" 
                                style="border:0;" 
@@ -440,6 +441,8 @@
     </script>
 </body>
 </html>
+
+
 
 
 
